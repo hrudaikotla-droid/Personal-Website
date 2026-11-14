@@ -5,38 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Slow Mind | Reclaiming Attention</title>
   <style>
-    :root {
-      --bg-cream: #FDF6E9;
-      --brown-dark: #422912;
-      --brown-medium: #784F27;
-      --brown-light: #EAD2AC;
-      --accent-warm: #C6843B;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: var(--bg-cream);
-      color: var(--brown-dark);
-      font-family: 'Georgia', serif;
-      line-height: 1.75;
-    }
-
-    header {
-      padding: 3.5rem 1.5rem 2.5rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.6rem;
-      letter-spacing: 0.5px;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      color: var(--brown-medium);
-      font-
+    :root { --bg: #FDF6E9; --dark: #422912; --med: #784F27; --light: #EAD2AC; --accent: #C6843B; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--dark); font-family: 'Georgia', serif; line-height: 1.75; }
+    header { padding: 3.5rem 1.5rem 2.5rem; text-align: center; }
+    header h1 { font-size: 2.6rem; margin-bottom: 0.5rem; }
+    header p { color: var(--med); font-style: italic; font-size: 1.1rem; max-width: 550px; margin: 0 auto; }
+    nav { display: flex; justify-content: center; gap: 2rem; padding: 1rem; background: var(--dark); }
+    nav a { color: var(--bg); text-decoration: none; font: 0.85rem 'Helvetica Neue', sans-serif; text-transform: uppercase; letter-spacing: 1.5px; }
+    .container { max-width: 720px; margin: 3.5rem auto; padding: 0 1.5rem; }
+    .section-label { font: 0.8rem 'Helvetica Neue', sans-serif; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 2rem; }
+    .tag { display: inline-block; color: var(--med); font: 0.72rem 'Helvetica Neue', sans-serif; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.6rem; }
+    .card h2 { font-size: 1.75rem; margin-bottom: 0.8rem; }
+    .card p { color: var(--med); margin-bottom: 1.2rem; }
+    .read-time { font: 0.8rem 'Helvetica Neue', sans-serif; color: var(--accent); }
+    footer { text-align: center; padding: 2.5rem; color: var(--med); font-size: 0.9rem; margin-top: 3rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Unhurried Mind</h1>
+    <p>Articles and short stories designed to rebuild your focus, one paragraph at a time.</p>
+  </header>
+  <nav>
+    <a href="#articles">Articles</a>
+    <a href="#stories">Short Stories</a>
+    <a href="#practice">Daily Practice</a>
+  </nav>
+  <div class="container">
+    <div id="articles" class="section-label">Featured Articles</div>
+    <div class="card">
+      <span class="tag">Article · Habit Building</span>
+      <h2>The 5-Page Rule for Rebuilding Stamina</h2>
+      <p>Attention is like a muscle that weakens when only fed ten-second clips. Starting with just five uninterrupted pages of long-form writing each afternoon stretches your focus span without causing burnout.</p>
+      <div class="read-time">6 min read · Practice: Put your phone in another room</div>
+    </div>
+  </div>
+  <footer>
+    <p>Take your time. You made it to the bottom without rushing.</p>
+  </footer>
+</body>
+</html>
