@@ -77,4 +77,219 @@
     }
 
     header h1 {
-      font-size: 2.6rem
+      font-size: 2.6rem;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--brown-medium);
+      font-style: italic;
+      font-size: 1.1rem;
+      max-width: 550px;
+      margin: 0 auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      background-color: var(--brown-dark);
+    }
+
+    nav a {
+      color: var(--bg-cream);
+      text-decoration: none;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-label {
+      font-family: 'Helvetica Neue', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+      color: var(--accent-warm);
+      margin-bottom: 1.2rem;
+      border-bottom: 1px solid var(--brown-light);
+      padding-bottom: 0.4rem;
+    }
+
+    .card {
+      background-color: var(--card-white);
+      border: 1px solid var(--brown-light);
+      border-radius: 6px;
+      padding: 2.2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 14px rgba(67, 40, 24, 0.06);
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: var(--bg-cream);
+      color: var(--brown-medium);
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0.3rem 0.75rem;
+      border-radius: 4px;
+      margin-bottom: 0.9rem;
+      border: 1px solid var(--brown-light);
+    }
+
+    .card h2 {
+      font-size: 1.65rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .card p {
+      color: var(--brown-medium);
+      margin-bottom: 1.2rem;
+    }
+
+    .story-excerpt {
+      border-left: 3px solid var(--accent-warm);
+      font-style: italic;
+      color: var(--brown-dark);
+      background-color: var(--bg-cream);
+      padding: 1.2rem 1.4rem;
+      border-radius: 0 4px 4px 0;
+      margin: 1rem 0;
+    }
+
+    .read-time {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.8rem;
+      color: var(--accent-warm);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem;
+      border-top: 1px solid var(--brown-light);
+      color: var(--brown-medium);
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="theme-bar">
+    <span>Pick a Vibe:</span>
+    <button class="theme-btn active" onclick="setTheme(0, this)">1. Caramel Latte</button>
+    <button class="theme-btn" onclick="setTheme(1, this)">2. Terracotta Clay</button>
+    <button class="theme-btn" onclick="setTheme(2, this)">3. Cinnamon Spice</button>
+    <button class="theme-btn" onclick="setTheme(3, this)">4. Golden Parchment</button>
+    <button class="theme-btn" onclick="setTheme(4, this)">5. Toasted Almond</button>
+    <button class="theme-btn" onclick="setTheme(5, this)">6. Warm Mocha</button>
+    <button class="theme-btn" onclick="setTheme(6, this)">7. Amber Honey</button>
+    <button class="theme-btn" onclick="setTheme(7, this)">8. Sunlit Linen</button>
+    <button class="theme-btn" onclick="setTheme(8, this)">9. Rustic Cedar</button>
+    <button class="theme-btn" onclick="setTheme(9, this)">10. Cozy Espresso (Dark)</button>
+  </div>
+
+  <header>
+    <h1>The Unhurried Mind</h1>
+    <p>Articles and short stories designed to rebuild your focus, one paragraph at a time.</p>
+  </header>
+
+  <nav>
+    <a href="#articles">Articles</a>
+    <a href="#stories">Short Stories</a>
+    <a href="#practice">Daily Practice</a>
+  </nav>
+
+  <div class="container">
+    <div id="articles" class="section-label">Featured Articles</div>
+
+    <div class="card">
+      <span class="tag">Article · Deep Focus</span>
+      <h2>Why Your Brain Craves Boredom</h2>
+      <p>Constant stimulation trains the mind to jump from one thought to the next every few seconds. When you remove the noise and sit with a single page for ten minutes, your neural pathways begin to settle back into deep focus.</p>
+      <div class="read-time">4 min read · Practice: Read without scrolling ahead</div>
+    </div>
+
+    <div class="card">
+      <span class="tag">Article · Habit Building</span>
+      <h2>The 5-Page Rule for Rebuilding Stamina</h2>
+      <p>Attention is like a muscle that weakens when only fed ten-second clips. Starting with just five uninterrupted pages of long-form writing each afternoon stretches your focus span without causing burnout.</p>
+      <div class="read-time">6 min read · Practice: Put your phone in another room</div>
+    </div>
+
+    <div id="stories" class="section-label">Pieces of Stories</div>
+
+    <div class="card">
+      <span class="tag">Story Piece · 3 Min Immersion</span>
+      <h2>The Clockmaker of Arden Valley</h2>
+      <div class="story-excerpt">
+        "For forty years, Elias never owned a watch that ticked louder than the rain. Customers came from the city demanding chimes and alarms, yet he only handed them brass pendulums that swung at half the speed of an ordinary second. 'If you watch it closely enough,' Elias told them, 'the afternoon lasts twice as long.'"
+      </div>
+      <p>Pause here for ten seconds and picture the workshop before moving on to the next section.</p>
+      <div class="read-time">Slow Reading Exercise · Part I</div>
+    </div>
+
+    <div id="practice" class="card">
+      <span class="tag">Story Piece · 5 Min Immersion</span>
+      <h2>Letters Left on the Porch</h2>
+      <div class="story-excerpt">
+        "Every Tuesday morning, a cream-colored envelope sat weighted beneath a smooth river stone on the top step. No stamps, no return address—only three paragraphs written in dark brown ink describing a single small thing the writer had noticed in the woods the day before."
+      </div>
+      <div class="read-time">Slow Reading Exercise · Part II</div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Take your time. You made it to the bottom without rushing.</p>
+  </footer>
+
+  <script>
+    const themes = [
+      // 1. Caramel Latte
+      { bg: '#FDF8F0', card: '#FFFDF9', dark: '#432818', med: '#6F4E37', light: '#E6CCB2', accent: '#BB9457' },
+      // 2. Terracotta Clay
+      { bg: '#FBF3EE', card: '#FFF9F5', dark: '#4A2511', med: '#7D4527', light: '#E8C5B0', accent: '#C86D51' },
+      // 3. Cinnamon Spice
+      { bg: '#FAF0E4', card: '#FFF8F0', dark: '#3D1E10', med: '#6E3B23', light: '#DFC3A8', accent: '#A85632' },
+      // 4. Golden Parchment
+      { bg: '#F7EFE1', card: '#FCF7EE', dark: '#3A2A18', med: '#634B30', light: '#DBC8AC', accent: '#9C7444' },
+      // 5. Toasted Almond
+      { bg: '#F5EBE0', card: '#FAF5EF', dark: '#3D2C21', med: '#6B5140', light: '#D5BDAF', accent: '#99745A' },
+      // 6. Warm Mocha
+      { bg: '#F4ECE6', card: '#FFFFFF', dark: '#2E1C14', med: '#5C3D2E', light: '#D4BFAE', accent: '#8C583A' },
+      // 7. Amber Honey
+      { bg: '#FDF6E9', card: '#FFFCF5', dark: '#422912', med: '#784F27', light: '#EAD2AC', accent: '#C6843B' },
+      // 8. Sunlit Linen
+      { bg: '#FAF6F0', card: '#FFFFFF', dark: '#473628', med: '#7A624E', light: '#E5DACB', accent: '#A68263' },
+      // 9. Rustic Cedar
+      { bg: '#F6EDE8', card: '#FDF9F7', dark: '#3B1F16', med: '#693C2E', light: '#DEC1B6', accent: '#9E543D' },
+      // 10. Cozy Espresso (Warm Dark Mode)
+      { bg: '#231710', card: '#2F2017', dark: '#F5E8DC', med: '#C8B09C', light: '#4A3427', accent: '#C88D55' }
+    ];
+
+    function setTheme(index, btn) {
+      const t = themes[index];
+      const root = document.documentElement.style;
+      root.setProperty('--bg-cream', t.bg);
+      root.setProperty('--card-white', t.card);
+      root.setProperty('--brown-dark', t.dark);
+      root.setProperty('--brown-medium', t.med);
+      root.setProperty('--brown-light', t.light);
+      root.setProperty('--accent-warm', t.accent);
+
+      document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+  </script>
+</body>
+</html>
