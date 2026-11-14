@@ -6,19 +6,18 @@
   <title>Slow Mind | Reclaiming Attention</title>
   <style>
     :root {
-      --bg-cream: #FDF8F0;
-      --card-white: #FFFDF9;
-      --brown-dark: #432818;
-      --brown-medium: #6F4E37;
-      --brown-light: #E6CCB2;
-      --accent-warm: #BB9457;
+      --bg-cream: #FDF6E9;
+      --card-white: #FFFCF5;
+      --brown-dark: #422912;
+      --brown-medium: #784F27;
+      --brown-light: #EAD2AC;
+      --accent-warm: #C6843B;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
     }
 
     body {
@@ -26,47 +25,6 @@
       color: var(--brown-dark);
       font-family: 'Georgia', serif;
       line-height: 1.75;
-    }
-
-    /* Live Theme Switcher Bar */
-    .theme-bar {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: #22150E;
-      color: #FDF8F0;
-      padding: 0.65rem 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 0.45rem;
-      font-family: 'Helvetica Neue', sans-serif;
-      font-size: 0.78rem;
-      border-bottom: 2px solid var(--accent-warm);
-    }
-
-    .theme-bar span {
-      font-weight: bold;
-      margin-right: 0.4rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .theme-btn {
-      background: #3B2416;
-      color: #F5EBE0;
-      border: 1px solid #6F4E37;
-      padding: 0.3rem 0.65rem;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 0.75rem;
-    }
-
-    .theme-btn:hover, .theme-btn.active {
-      background: var(--accent-warm);
-      color: #FFF;
-      border-color: #FFF;
     }
 
     header {
@@ -107,6 +65,10 @@
       letter-spacing: 1.5px;
     }
 
+    nav a:hover {
+      color: var(--brown-light);
+    }
+
     .container {
       max-width: 850px;
       margin: 3rem auto;
@@ -130,7 +92,7 @@
       border-radius: 6px;
       padding: 2.2rem;
       margin-bottom: 2rem;
-      box-shadow: 0 4px 14px rgba(67, 40, 24, 0.06);
+      box-shadow: 0 4px 14px rgba(66, 41, 18, 0.06);
     }
 
     .tag {
@@ -184,20 +146,6 @@
   </style>
 </head>
 <body>
-
-  <div class="theme-bar">
-    <span>Pick a Vibe:</span>
-    <button class="theme-btn active" onclick="setTheme(0, this)">1. Caramel Latte</button>
-    <button class="theme-btn" onclick="setTheme(1, this)">2. Terracotta Clay</button>
-    <button class="theme-btn" onclick="setTheme(2, this)">3. Cinnamon Spice</button>
-    <button class="theme-btn" onclick="setTheme(3, this)">4. Golden Parchment</button>
-    <button class="theme-btn" onclick="setTheme(4, this)">5. Toasted Almond</button>
-    <button class="theme-btn" onclick="setTheme(5, this)">6. Warm Mocha</button>
-    <button class="theme-btn" onclick="setTheme(6, this)">7. Amber Honey</button>
-    <button class="theme-btn" onclick="setTheme(7, this)">8. Sunlit Linen</button>
-    <button class="theme-btn" onclick="setTheme(8, this)">9. Rustic Cedar</button>
-    <button class="theme-btn" onclick="setTheme(9, this)">10. Cozy Espresso (Dark)</button>
-  </div>
 
   <header>
     <h1>The Unhurried Mind</h1>
@@ -253,43 +201,5 @@
     <p>Take your time. You made it to the bottom without rushing.</p>
   </footer>
 
-  <script>
-    const themes = [
-      // 1. Caramel Latte
-      { bg: '#FDF8F0', card: '#FFFDF9', dark: '#432818', med: '#6F4E37', light: '#E6CCB2', accent: '#BB9457' },
-      // 2. Terracotta Clay
-      { bg: '#FBF3EE', card: '#FFF9F5', dark: '#4A2511', med: '#7D4527', light: '#E8C5B0', accent: '#C86D51' },
-      // 3. Cinnamon Spice
-      { bg: '#FAF0E4', card: '#FFF8F0', dark: '#3D1E10', med: '#6E3B23', light: '#DFC3A8', accent: '#A85632' },
-      // 4. Golden Parchment
-      { bg: '#F7EFE1', card: '#FCF7EE', dark: '#3A2A18', med: '#634B30', light: '#DBC8AC', accent: '#9C7444' },
-      // 5. Toasted Almond
-      { bg: '#F5EBE0', card: '#FAF5EF', dark: '#3D2C21', med: '#6B5140', light: '#D5BDAF', accent: '#99745A' },
-      // 6. Warm Mocha
-      { bg: '#F4ECE6', card: '#FFFFFF', dark: '#2E1C14', med: '#5C3D2E', light: '#D4BFAE', accent: '#8C583A' },
-      // 7. Amber Honey
-      { bg: '#FDF6E9', card: '#FFFCF5', dark: '#422912', med: '#784F27', light: '#EAD2AC', accent: '#C6843B' },
-      // 8. Sunlit Linen
-      { bg: '#FAF6F0', card: '#FFFFFF', dark: '#473628', med: '#7A624E', light: '#E5DACB', accent: '#A68263' },
-      // 9. Rustic Cedar
-      { bg: '#F6EDE8', card: '#FDF9F7', dark: '#3B1F16', med: '#693C2E', light: '#DEC1B6', accent: '#9E543D' },
-      // 10. Cozy Espresso (Warm Dark Mode)
-      { bg: '#231710', card: '#2F2017', dark: '#F5E8DC', med: '#C8B09C', light: '#4A3427', accent: '#C88D55' }
-    ];
-
-    function setTheme(index, btn) {
-      const t = themes[index];
-      const root = document.documentElement.style;
-      root.setProperty('--bg-cream', t.bg);
-      root.setProperty('--card-white', t.card);
-      root.setProperty('--brown-dark', t.dark);
-      root.setProperty('--brown-medium', t.med);
-      root.setProperty('--brown-light', t.light);
-      root.setProperty('--accent-warm', t.accent);
-
-      document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-    }
-  </script>
 </body>
 </html>
